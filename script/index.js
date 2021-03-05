@@ -25,14 +25,15 @@ function blink(key){
 }
 
 
-function clickFeature(event){
-
-}
 
 var lists = document.querySelectorAll('div[data-key]');
-lists.forEach(item){
-  item.addEventListener("click",clickFeature(e));
-}
+lists.forEach(function(item){
+  item.addEventListener("click",function(e){
+    console.log(e);
+  });
+});
+  
+
 document.addEventListener("keydown",function(e){
   var key = e.key;
   console.log("pressed " + key)
