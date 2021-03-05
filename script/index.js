@@ -65,7 +65,7 @@ function blink(key){
     document.querySelector(`div[data-key="${key}"]`).style.boxShadow = "0 0 30px white";
     setTimeout(function(){
       document.querySelector(`div[data-key="${key}"]`).style.boxShadow = null;  
-      console.log("fome");
+
     },10); 
 }
 }
@@ -90,7 +90,7 @@ lists.forEach(function(item){
 document.addEventListener("keydown",function(e){
   var key = e.key;
   console.log("pressed " + key)
-  document.getElementById("test").innerHTML = "TEST Success"
+  
   playSound(key);
   blink(key);
   console.log("played "+key);
